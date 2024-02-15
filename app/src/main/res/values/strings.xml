@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Airlib-Task</string>
+    <string name="login">Login</string>
+    <string name="password">Password\n</string>
+    <string name="email">Email\n</string>
+    <string name="error_email">Please enter email address\n</string>
+    <string name="error_password">Please enter your password\n</string>
+    <string name="general_error_title">Error</string>
+    <string name="action_ok">Ok\n</string>
+    <string name="welcome">Welcome %1$s..</string>
+    <string name="associated_drug">Associated Drug :</string>
+    <string name="dose">Dose\n</string>
+    <string name="strength">Strength\n</string>
+</resources>
