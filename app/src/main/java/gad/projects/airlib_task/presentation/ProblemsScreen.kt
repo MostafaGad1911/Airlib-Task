@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import gad.projects.airlib_task.R
+import gad.projects.airlib_task.core.helpers.getGreetingMessage
 import gad.projects.airlib_task.data.datasource.api.entities.AssociatedDrug
 import gad.projects.airlib_task.presentation.problems.UserProblemsViewModel
 import gad.projects.airlib_task.ui.composables.AirLibLoadingView
@@ -58,7 +59,7 @@ fun ProblemsScreen(problemsViewModel: UserProblemsViewModel, email: String) {
             verticalArrangement = Arrangement.Top
         ) {
 
-            Text(text = stringResource(R.string.welcome, email))
+            Text(text = getGreetingMessage() + " $email")
 
             VSpacer(e = 10)
             LazyColumn(content = {

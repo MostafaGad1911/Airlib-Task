@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.viewModelScope
 import gad.projects.airlib_task.R
 import gad.projects.airlib_task.core.base.BaseViewModel
+import gad.projects.airlib_task.core.helpers.getGreetingMessage
 import gad.projects.airlib_task.core.manager.networkconnectivity.NetworkConnectivityManager
 import gad.projects.airlib_task.data.datasource.api.entities.AssociatedDrug
 import gad.projects.airlib_task.domain.model.AirLibAuthenticationUiState
@@ -33,6 +34,9 @@ class UserProblemsViewModel(
     private var _airliftAuthUiState = MutableStateFlow(AirLibAuthenticationUiState())
     val airliftAuthUiState = _airliftAuthUiState.asStateFlow()
 
+    init {
+        getGreetingMessage()
+    }
     suspend fun getProblems() {
         viewModelScope.launch {
             try {
